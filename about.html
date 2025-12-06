@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>关于我们 - 皮蛋工作室</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <h2>🥚 皮蛋工作室</h2>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">首页</a></li>
+                <li><a href="blog.html">博客</a></li>
+                <li><a href="vote-app/index.html">投票应用</a></li>
+                <li><a href="about.html" class="active">关于</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 关于内容 -->
+    <main class="about-page">
+        <div class="container">
+            <div class="about-content">
+                <h1>关于皮蛋工作室</h1>
+                
+                <section class="about-section">
+                    <h2>🎮 我们是谁</h2>
+                    <p>
+                        皮蛋工作室（Pidan Workshop）是一个专注于游戏开发和创意应用的独立工作室。
+                        我们相信"Making game is the greatest game, ever"——制作游戏本身就是最好的游戏。
+                    </p>
+                </section>
+
+                <section class="about-section">
+                    <h2>💡 我们做什么</h2>
+                    <ul class="feature-list">
+                        <li><strong>游戏开发：</strong>使用Defold等现代游戏引擎创作有趣的游戏</li>
+                        <li><strong>创意应用：</strong>开发各种实用和有趣的互动应用</li>
+                        <li><strong>技术分享：</strong>通过博客分享开发经验和技术心得</li>
+                        <li><strong>开源项目：</strong>参与开源社区，贡献代码和创意</li>
+                    </ul>
+                </section>
+
+                <section class="about-section">
+                    <h2>🛠️ 技术栈</h2>
+                    <div class="tech-stack">
+                        <div class="tech-item">
+                            <h3>游戏开发</h3>
+                            <p>Defold, Unity, Godot</p>
+                        </div>
+                        <div class="tech-item">
+                            <h3>前端开发</h3>
+                            <p>HTML5, CSS3, JavaScript</p>
+                        </div>
+                        <div class="tech-item">
+                            <h3>其他工具</h3>
+                            <p>Git, GitHub, VS Code</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="about-section">
+                    <h2>📫 联系我们</h2>
+                    <div class="contact-info">
+                        <p><strong>Email:</strong> pidanworkshop@gmail.com</p>
+                        <p><strong>GitHub:</strong> <a href="https://github.com/Cloud-W" target="_blank">@Cloud-W</a></p>
+                        <p><strong>位置:</strong> 中国</p>
+                    </div>
+                </section>
+
+                <section class="about-section">
+                    <h2>🚀 加入我们</h2>
+                    <p>
+                        如果你对游戏开发感兴趣，或者有好的创意想法想要实现，
+                        欢迎通过邮件与我们联系！我们期待与充满热情的创作者合作。
+                    </p>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>皮蛋工作室</h3>
+                    <p>专注于游戏开发和创意应用</p>
+                </div>
+                <div class="footer-section">
+                    <h3>联系方式</h3>
+                    <p>Email: pidanworkshop@gmail.com</p>
+                    <p>GitHub: <a href="https://github.com/Cloud-W" target="_blank">Cloud-W</a></p>
+                </div>
+                <div class="footer-section">
+                    <h3>快速链接</h3>
+                    <ul>
+                        <li><a href="blog.html">博客</a></li>
+                        <li><a href="vote-app/index.html">投票应用</a></li>
+                        <li><a href="about.html">关于我们</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 皮蛋工作室 | Pidan Workshop. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <style>
+        .about-page {
+            padding: 3rem 0;
+            min-height: 70vh;
+        }
+
+        .about-content {
+            max-width: 900px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            padding: 3rem;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+        }
+
+        .about-content h1 {
+            color: var(--primary-color);
+            margin-bottom: 2rem;
+            text-align: center;
+            font-size: 2.5rem;
+        }
+
+        .about-section {
+            margin-bottom: 3rem;
+        }
+
+        .about-section h2 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--border-color);
+        }
+
+        .about-section p {
+            line-height: 1.8;
+            color: #555;
+        }
+
+        .feature-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .feature-list li {
+            padding: 0.8rem 0;
+            border-bottom: 1px solid var(--border-color);
+            line-height: 1.6;
+        }
+
+        .feature-list li:last-child {
+            border-bottom: none;
+        }
+
+        .tech-stack {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        .tech-item {
+            background: var(--bg-color);
+            padding: 1.5rem;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .tech-item h3 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-info {
+            background: var(--bg-color);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-top: 1rem;
+        }
+
+        .contact-info p {
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-info a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .about-content {
+                padding: 2rem 1.5rem;
+            }
+
+            .about-content h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</body>
+</html>

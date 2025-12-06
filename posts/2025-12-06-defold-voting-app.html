@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>使用Defold开发投票应用 - 皮蛋工作室</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/blog.css">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <h2>🥚 皮蛋工作室</h2>
+            </div>
+            <ul class="nav-links">
+                <li><a href="../index.html">首页</a></li>
+                <li><a href="../blog.html" class="active">博客</a></li>
+                <li><a href="../vote-app/index.html">投票应用</a></li>
+                <li><a href="../about.html">关于</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 博文内容 -->
+    <main class="blog-page">
+        <div class="container">
+            <article class="post-detail">
+                <header class="post-header">
+                    <h1>使用Defold开发投票应用</h1>
+                    <div class="post-meta">
+                        2025年12月06日 | 分类: 教程
+                    </div>
+                    <div class="post-tags">
+                        <span class="tag">Defold</span>
+                        <span class="tag">游戏开发</span>
+                        <span class="tag">教程</span>
+                    </div>
+                </header>
+
+                <div class="post-content">
+                    <p>
+                        本文将介绍如何使用Defold游戏引擎开发一个互动投票应用，
+                        包括广告集成、数据存储等核心功能的实现。
+                    </p>
+
+                    <h2>为什么选择Defold？</h2>
+                    <p>
+                        Defold是一个轻量级、高性能的跨平台游戏引擎，非常适合开发2D游戏和互动应用。
+                        它的主要优势包括：
+                    </p>
+                    <ul>
+                        <li>✅ 完全免费开源</li>
+                        <li>✅ 支持HTML5导出，可直接部署到网页</li>
+                        <li>✅ 内置Lua脚本，易于学习</li>
+                        <li>✅ 强大的编辑器和工具链</li>
+                        <li>✅ 优秀的性能和小体积</li>
+                    </ul>
+
+                    <h2>项目架构</h2>
+                    <p>我们的投票应用主要包含以下模块：</p>
+
+                    <h3>1. 用户界面</h3>
+                    <p>
+                        使用Defold的GUI系统创建界面，包括偶像列表、投票按钮、广告观看按钮等。
+                        GUI系统基于场景图，支持锚点、九宫格缩放等特性，很容易实现响应式布局。
+                    </p>
+
+                    <h3>2. 数据管理</h3>
+                    <p>
+                        使用Lua table存储投票数据，并通过<code>sys.save()</code>和<code>sys.load()</code>
+                        实现本地持久化存储。这样用户刷新页面后数据不会丢失。
+                    </p>
+
+                    <pre><code>-- 保存数据示例
+local function save_votes()
+    local votes_data = {
+        idol1 = votes.idol1,
+        idol2 = votes.idol2,
+        idol3 = votes.idol3
+    }
+    sys.save("votes", votes_data)
+end
+
+-- 加载数据示例
+local function load_votes()
+    local votes_data = sys.load("votes")
+    if votes_data then
+        votes.idol1 = votes_data.idol1 or 0
+        votes.idol2 = votes_data.idol2 or 0
+        votes.idol3 = votes_data.idol3 or 0
+    end
+end</code></pre>
+
+                    <h3>3. 广告集成</h3>
+                    <p>
+                        对于Web平台，可以集成AdSense或其他广告SDK。
+                        Defold支持通过HTML5 extension调用JavaScript代码，
+                        实现与网页广告系统的交互。
+                    </p>
+
+                    <h2>部署到GitHub Pages</h2>
+                    <p>将Defold项目导出为HTML5版本后，部署非常简单：</p>
+                    <ol>
+                        <li>在Defold编辑器中选择 <strong>Project → Bundle → HTML5</strong></li>
+                        <li>选择导出位置并生成文件</li>
+                        <li>将生成的所有文件（index.html, dmloader.js, game.wasm等）复制到GitHub Pages仓库</li>
+                        <li>提交并推送到GitHub</li>
+                        <li>几分钟后即可访问</li>
+                    </ol>
+
+                    <h2>遇到的挑战</h2>
+                    <p>开发过程中遇到的主要挑战：</p>
+                    <ul>
+                        <li><strong>性能优化：</strong>确保在移动设备上流畅运行</li>
+                        <li><strong>跨浏览器兼容：</strong>处理不同浏览器的WebGL支持差异</li>
+                        <li><strong>资源加载：</strong>优化资源大小以减少加载时间</li>
+                    </ul>
+
+                    <h2>下一步计划</h2>
+                    <p>未来我们计划添加以下功能：</p>
+                    <ul>
+                        <li>🔄 云端数据同步</li>
+                        <li>📊 投票统计和排行榜</li>
+                        <li>🎨 更多主题和自定义选项</li>
+                        <li>🌐 多语言支持</li>
+                    </ul>
+
+                    <h2>体验应用</h2>
+                    <p>
+                        现在就可以在我们的网站上体验这个投票应用！
+                    </p>
+                    <p style="text-align: center;">
+                        <a href="../vote-app/index.html" class="btn btn-primary">立即体验</a>
+                    </p>
+
+                    <h2>总结</h2>
+                    <p>
+                        Defold是一个非常适合开发轻量级互动应用的引擎。
+                        通过HTML5导出功能，我们可以轻松地将应用部署到网页上，
+                        无需用户安装任何东西即可体验。
+                    </p>
+                    <p>
+                        如果你对Defold开发感兴趣，欢迎访问
+                        <a href="https://defold.com/" target="_blank">Defold官网</a>了解更多！
+                    </p>
+                </div>
+
+                <div style="text-align: center; margin-top: 3rem; padding-top: 2rem; border-top: 2px solid var(--border-color);">
+                    <a href="../blog.html" class="btn btn-secondary">← 返回博客列表</a>
+                </div>
+            </article>
+        </div>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>皮蛋工作室</h3>
+                    <p>专注于游戏开发和创意应用</p>
+                </div>
+                <div class="footer-section">
+                    <h3>联系方式</h3>
+                    <p>Email: pidanworkshop@gmail.com</p>
+                    <p>GitHub: <a href="https://github.com/Cloud-W" target="_blank">Cloud-W</a></p>
+                </div>
+                <div class="footer-section">
+                    <h3>快速链接</h3>
+                    <ul>
+                        <li><a href="../blog.html">博客</a></li>
+                        <li><a href="../vote-app/index.html">投票应用</a></li>
+                        <li><a href="../about.html">关于我们</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 皮蛋工作室 | Pidan Workshop. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

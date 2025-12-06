@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>博客 - 皮蛋工作室</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/blog.css">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <h2>🥚 皮蛋工作室</h2>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">首页</a></li>
+                <li><a href="blog.html" class="active">博客</a></li>
+                <li><a href="vote-app/index.html">投票应用</a></li>
+                <li><a href="about.html">关于</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 博客内容 -->
+    <main class="blog-page">
+        <div class="container">
+            <h1 class="page-title">技术博客</h1>
+            <p class="page-subtitle">分享开发经验、技术心得与创意想法</p>
+
+            <div class="blog-content">
+                <!-- 博文列表 -->
+                <div class="posts-list" id="posts-list">
+                    <p class="loading">加载博文中...</p>
+                </div>
+
+                <!-- 侧边栏 -->
+                <aside class="sidebar">
+                    <div class="sidebar-section">
+                        <h3>分类</h3>
+                        <ul class="category-list" id="categories">
+                            <li><a href="#" data-category="all">全部</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="sidebar-section">
+                        <h3>标签</h3>
+                        <div class="tags-cloud" id="tags">
+                            <!-- 标签动态加载 -->
+                        </div>
+                    </div>
+
+                    <div class="sidebar-section">
+                        <h3>归档</h3>
+                        <ul class="archive-list" id="archives">
+                            <!-- 归档动态加载 -->
+                        </ul>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>皮蛋工作室</h3>
+                    <p>专注于游戏开发和创意应用</p>
+                </div>
+                <div class="footer-section">
+                    <h3>联系方式</h3>
+                    <p>Email: pidanworkshop@gmail.com</p>
+                    <p>GitHub: <a href="https://github.com/Cloud-W" target="_blank">Cloud-W</a></p>
+                </div>
+                <div class="footer-section">
+                    <h3>快速链接</h3>
+                    <ul>
+                        <li><a href="blog.html">博客</a></li>
+                        <li><a href="vote-app/index.html">投票应用</a></li>
+                        <li><a href="about.html">关于我们</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 皮蛋工作室 | Pidan Workshop. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/blog-loader.js"></script>
+    <script src="js/blog-page.js"></script>
+</body>
+</html>

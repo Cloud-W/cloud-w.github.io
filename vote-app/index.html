@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>投票应用 - 皮蛋工作室</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .app-container {
+            min-height: 80vh;
+            padding: 3rem 0;
+            text-align: center;
+        }
+        .app-placeholder {
+            background: var(--card-bg);
+            padding: 4rem 2rem;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .app-placeholder h1 {
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+        }
+        .instructions {
+            text-align: left;
+            margin: 2rem auto;
+            max-width: 600px;
+        }
+        .instructions ol {
+            line-height: 2;
+        }
+        .instructions code {
+            background: var(--bg-color);
+            padding: 0.2rem 0.5rem;
+            border-radius: 3px;
+            font-family: monospace;
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <h2>🥚 皮蛋工作室</h2>
+            </div>
+            <ul class="nav-links">
+                <li><a href="../index.html">首页</a></li>
+                <li><a href="../blog.html">博客</a></li>
+                <li><a href="index.html" class="active">投票应用</a></li>
+                <li><a href="../about.html">关于</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="app-container">
+        <div class="container">
+            <div class="app-placeholder">
+                <h1>🗳️ 偶像投票应用</h1>
+                <p style="font-size: 1.2rem; color: #666; margin-bottom: 2rem;">
+                    这里将展示您的Defold应用
+                </p>
+
+                <div class="instructions">
+                    <h3>📋 部署步骤：</h3>
+                    <ol>
+                        <li>在Defold编辑器中打开您的项目</li>
+                        <li>选择菜单：<code>Project → Bundle → HTML5</code></li>
+                        <li>选择导出目录并生成文件</li>
+                        <li>将所有生成的文件复制到这个 <code>vote-app</code> 文件夹</li>
+                        <li>确保主文件名为 <code>index.html</code></li>
+                        <li>提交并推送到GitHub</li>
+                    </ol>
+
+                    <h3 style="margin-top: 2rem;">📂 预期文件结构：</h3>
+                    <pre style="background: var(--bg-color); padding: 1rem; border-radius: 5px; text-align: left;">
+vote-app/
+  ├── index.html
+  ├── dmloader.js
+  ├── game.wasm
+  ├── game.js
+  └── archive/
+      └── (游戏资源文件)
+                    </pre>
+                </div>
+
+                <div style="margin-top: 2rem;">
+                    <a href="../blog.html" class="btn btn-primary">阅读开发教程</a>
+                    <a href="../about.html" class="btn btn-secondary">联系我们</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>皮蛋工作室</h3>
+                    <p>专注于游戏开发和创意应用</p>
+                </div>
+                <div class="footer-section">
+                    <h3>联系方式</h3>
+                    <p>Email: pidanworkshop@gmail.com</p>
+                    <p>GitHub: <a href="https://github.com/Cloud-W" target="_blank">Cloud-W</a></p>
+                </div>
+                <div class="footer-section">
+                    <h3>快速链接</h3>
+                    <ul>
+                        <li><a href="../blog.html">博客</a></li>
+                        <li><a href="index.html">投票应用</a></li>
+                        <li><a href="../about.html">关于我们</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 皮蛋工作室 | Pidan Workshop. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

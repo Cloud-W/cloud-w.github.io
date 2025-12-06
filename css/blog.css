@@ -1,0 +1,255 @@
+/* 博客页面样式 */
+.blog-page {
+    padding: 3rem 0;
+    min-height: 70vh;
+}
+
+.page-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+}
+
+.page-subtitle {
+    text-align: center;
+    color: #666;
+    margin-bottom: 3rem;
+}
+
+.blog-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 3rem;
+}
+
+/* 博文列表 */
+.posts-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.post-card {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.post-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-hover);
+}
+
+.post-card h2 {
+    margin-bottom: 0.5rem;
+}
+
+.post-card h2 a {
+    color: var(--text-color);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.post-card h2 a:hover {
+    color: var(--primary-color);
+}
+
+.post-tags {
+    display: flex;
+    gap: 0.5rem;
+    margin: 1rem 0;
+    flex-wrap: wrap;
+}
+
+.tag {
+    background: var(--bg-color);
+    color: var(--primary-color);
+    padding: 0.3rem 0.8rem;
+    border-radius: 15px;
+    font-size: 0.85rem;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.tag:hover {
+    background: var(--primary-color);
+    color: white;
+}
+
+.post-read-more {
+    display: inline-block;
+    margin-top: 1rem;
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+    transition: transform 0.3s;
+}
+
+.post-read-more:hover {
+    transform: translateX(5px);
+}
+
+/* 侧边栏 */
+.sidebar {
+    position: sticky;
+    top: 100px;
+    height: fit-content;
+}
+
+.sidebar-section {
+    background: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    margin-bottom: 2rem;
+}
+
+.sidebar-section h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--border-color);
+}
+
+.category-list,
+.archive-list {
+    list-style: none;
+}
+
+.category-list li,
+.archive-list li {
+    margin-bottom: 0.5rem;
+}
+
+.category-list a,
+.archive-list a {
+    color: var(--text-color);
+    text-decoration: none;
+    transition: color 0.3s;
+    display: flex;
+    justify-content: space-between;
+}
+
+.category-list a:hover,
+.archive-list a:hover {
+    color: var(--primary-color);
+}
+
+.tags-cloud {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.tags-cloud .tag {
+    font-size: 0.8rem;
+}
+
+/* 博文详情页 */
+.post-detail {
+    background: var(--card-bg);
+    padding: 3rem;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    margin: 3rem 0;
+}
+
+.post-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 2px solid var(--border-color);
+}
+
+.post-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+.post-content {
+    line-height: 1.8;
+    font-size: 1.1rem;
+}
+
+.post-content h2 {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+.post-content h3 {
+    margin-top: 1.5rem;
+    margin-bottom: 0.8rem;
+    color: var(--text-color);
+}
+
+.post-content p {
+    margin-bottom: 1rem;
+}
+
+.post-content code {
+    background: var(--bg-color);
+    padding: 0.2rem 0.4rem;
+    border-radius: 3px;
+    font-family: 'Consolas', 'Monaco', monospace;
+    font-size: 0.9em;
+}
+
+.post-content pre {
+    background: #2d2d2d;
+    color: #f8f8f2;
+    padding: 1.5rem;
+    border-radius: 5px;
+    overflow-x: auto;
+    margin: 1.5rem 0;
+}
+
+.post-content pre code {
+    background: none;
+    padding: 0;
+    color: inherit;
+}
+
+.post-content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin: 1.5rem 0;
+}
+
+.post-content ul,
+.post-content ol {
+    margin-left: 2rem;
+    margin-bottom: 1rem;
+}
+
+.post-content blockquote {
+    border-left: 4px solid var(--primary-color);
+    padding-left: 1.5rem;
+    margin: 1.5rem 0;
+    color: #666;
+    font-style: italic;
+}
+
+/* 响应式设计 */
+@media (max-width: 968px) {
+    .blog-content {
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar {
+        position: static;
+    }
+
+    .post-detail {
+        padding: 2rem 1.5rem;
+    }
+
+    .post-header h1 {
+        font-size: 2rem;
+    }
+}
